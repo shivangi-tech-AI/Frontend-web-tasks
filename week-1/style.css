@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #ffffff;
+color: #222222;
+line-height: 1.6;
+}
+
+.container {
+width: 90%;
+max-width: 1100px;
+margin: 0 auto;
+}
+
+
+
+.site-header {
+background-color: #d4d0d0;
+border-bottom: 1px solid #d13434;
+}
+
+.navbar {
+min-height: 70px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.logo {
+font-size: 24px;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+.logo span {
+color: #3b5bdb;
+}
+
+.navigation {
+display: flex;
+gap: 30px;
+}
+
+.navigation span {
+color: #333333;
+font-size: 15px;
+font-weight: 500;
+}
+
+
+.hero {
+background-color: #f7f8fc;
+border-bottom: 1px solid #60da93;
+text-align: center;
+padding: 90px 20px;
+}
+
+.hero-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.hero h1 {
+font-size: 42px;
+font-weight: 700;
+letter-spacing: 1px;
+margin-bottom: 20px;
+}
+
+.hero p {
+max-width: 500px;
+color: #666666;
+font-size: 18px;
+margin-bottom: 30px;
+}
+
+
+.button {
+display: inline-block;
+background-color: #3b5bdb;
+color: #ffffff;
+padding: 12px 26px;
+border-radius: 5px;
+font-size: 15px;
+font-weight: 600;
+}
+
+
+.subjects {
+background-color: #ffffff;
+border-bottom: 1px solid #60da93;
+padding: 70px 20px;
+}
+
+.subjects h2 {
+text-align: center;
+font-size: 28px;
+margin-bottom: 40px;
+}
+
+.subject-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+max-width: 900px;
+margin: 0 auto;
+}
+
+.subject-card {
+min-height: 150px;
+border: 1px solid #cccccc;
+border-radius: 8px;
+background-color: #fafafa;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+text-align: center;
+
+}
+
+.subject-card h3 {
+font-size: 20px;
+line-height: 1.4;
+}
+
+
+.about {
+background-color: #f7f8fc;
+border-bottom: 1px solid #60da93;
+padding: 70px 20px;
+}
+
+.about h2 {
+text-align: center;
+font-size: 28px;
+margin-bottom: 40px;
+}
+
+.about-content {
+max-width: 850px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: 300px 1fr;
+
+align-items: center;
+gap: 50px;
+}
+
+.about-image {
+           width: 100%;
+           height: 190px;
+           background-color: #e8e8e8;
+           border: 1px solid #cccccc;
+        border-radius: 6px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.about-image span {
+color: #777777;
+font-size: 16px;
+}
+
+.about-text {
+color: #555555;
+font-size: 17px;
+}
+
+.get-started {
+background-color: #ffffff;
+border-bottom: 1px solid #d13434;
+text-align: center;
+padding: 70px 20px;
+}
+
+.get-started h2 {
+font-size: 28px;
+margin-bottom: 30px;
+}
+
+.site-footer {
+background-color: #d4d0d0;
+}
+
+.footer-content {
+min-height: 75px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.footer-content p {
+color: #666666;
+font-size: 14px;
+}
+
+.footer-links {
+display: flex;
+gap: 25px;
+}
+
+.footer-links span {
+color: #444444;
+font-size: 14px;
+}
+
+@media (max-width: 768px) {
+.navbar {
+    min-height: auto;
+    padding: 18px 0;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.navigation {
+    gap: 20px;
+}
+
+.hero {
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    font-size: 34px;
+}
+
+.subject-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    max-width: 500px;
+}
+
+.about-image {
+    max-width: 350px;
+    margin: 0 auto;
+}
+}
+
+@media (max-width: 500px) {
+
+.container {
+    width: 92%;
+}
+
+.navigation {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navigation span {
+    font-size: 14px;
+}
+
+.hero {
+    padding: 60px 15px;
+}
+
+.hero h1 {
+    font-size: 29px;
+    letter-spacing: 0;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+.subjects,
+.about,
+.get-started {
+    padding: 55px 15px;
+}
+
+.subjects h2,
+.about h2,
+.get-started h2 {
+    font-size: 24px;
+}
+
+.subject-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.subject-card {
+    min-height: 120px;
+}
+
+.about-content {
+    gap: 25px;
+}
+
+.footer-content {
+    padding: 20px 0;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+}
+}
