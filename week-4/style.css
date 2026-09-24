@@ -1,0 +1,706 @@
+/* =========================================================
+   UTKARSH NOTES - WEEK 4
+   Professional UI + Responsive Design + Accessibility
+   ========================================================= */
+
+/* ---------- Basic Reset ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #1f2937;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* ---------- Common Container ---------- */
+
+.container {
+    width: 92%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+/* ---------- Skip Link ---------- */
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 10px;
+    z-index: 1000;
+
+    padding: 10px 15px;
+
+    background: #111827;
+    color: #ffffff;
+
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.skip-link:focus {
+    left: 10px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.navbar {
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #111827;
+}
+
+.logo span {
+    color: #3b5bdb;
+}
+
+
+/* ---------- Navigation ---------- */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.navigation a {
+    color: #374151;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.navigation a:hover {
+    color: #3b5bdb;
+}
+
+
+/* ---------- Keyboard Focus ---------- */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #1d4ed8;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        #f3f6ff,
+        #ffffff
+    );
+
+    border-bottom: 1px solid #e5e7eb;
+
+    text-align: center;
+
+    padding: 110px 20px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -1px;
+
+    color: #111827;
+
+    margin-bottom: 24px;
+}
+
+.hero p {
+    max-width: 650px;
+
+    color: #5b6472;
+
+    font-size: 19px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.button {
+    display: inline-block;
+
+    border: none;
+
+    background: #3b5bdb;
+    color: #ffffff;
+
+    padding: 14px 30px;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(59, 91, 219, 0.18);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.button:hover {
+    background: #2947b8;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 18px rgba(59, 91, 219, 0.25);
+}
+
+
+/* =========================================================
+   DYNAMIC MESSAGE
+   ========================================================= */
+
+.dynamic-message {
+    max-width: 650px;
+
+    margin-top: 28px;
+
+    padding: 17px 22px;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe1ea;
+
+    color: #374151;
+
+    display: none;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.dynamic-message.show {
+    display: block;
+
+    animation: messageAppear 0.4s ease;
+}
+
+
+/* =========================================================
+   SUBJECT SECTION
+   ========================================================= */
+
+.subjects {
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    padding: 85px 20px;
+}
+
+.subjects h2,
+.about h2,
+.get-started h2 {
+    text-align: center;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    color: #111827;
+}
+
+.subjects h2,
+.about h2 {
+    margin-bottom: 45px;
+}
+
+
+/* ---------- Subject Grid ---------- */
+
+.subject-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+/* ---------- Subject Card ---------- */
+
+.subject-card {
+    min-height: 175px;
+
+    padding: 25px;
+
+    border: 1px solid #e1e5ec;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.subject-card-title {
+    font-size: 22px;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+
+    color: #1f2937;
+}
+
+.subject-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+
+    border-color: #b9c5e8;
+}
+
+
+/* ---------- Selected Subject ---------- */
+
+.subject-card[aria-pressed="true"] {
+    border: 2px solid #3b5bdb;
+
+    background: #f1f4ff;
+
+    box-shadow: 0 10px 25px rgba(59, 91, 219, 0.15);
+}
+
+
+/* ---------- Subject Message ---------- */
+
+.subject-message {
+    max-width: 700px;
+
+    margin: 32px auto 0;
+
+    padding: 17px 22px;
+
+    text-align: center;
+
+    border-radius: 8px;
+
+    border: 1px solid #dbe1ea;
+
+    background: #f8fafc;
+
+    color: #4b5563;
+}
+
+
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+.about {
+    background: #f7f8fc;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    padding: 85px 20px;
+}
+
+.about-content {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 320px 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+
+/* ---------- About Image ---------- */
+
+.about-image {
+    width: 100%;
+
+    height: 210px;
+
+    background: #e8e8e8;
+
+    border: 1px solid #d7dce5;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ---------- About Text ---------- */
+
+.about-text {
+    color: #4b5563;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   GET STARTED
+   ========================================================= */
+
+.get-started {
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    text-align: center;
+
+    padding: 85px 20px;
+}
+
+.get-started h2 {
+    margin-bottom: 32px;
+}
+
+.start-message {
+    margin-top: 22px;
+
+    color: #2947b8;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    background: #111827;
+
+    color: #ffffff;
+}
+
+.footer-content {
+    min-height: 85px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.footer-content p {
+    color: #d1d5db;
+
+    font-size: 15px;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 28px;
+}
+
+.footer-links a {
+    color: #e5e7eb;
+
+    font-size: 15px;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes messageAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: auto;
+
+        padding: 18px 0;
+
+        flex-direction: column;
+
+        gap: 16px;
+    }
+
+    .navigation {
+        gap: 22px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        max-width: 550px;
+
+        gap: 35px;
+    }
+
+    .about-image {
+        max-width: 380px;
+
+        margin: 0 auto;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 70px 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+
+        letter-spacing: -0.5px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .button {
+        padding: 13px 24px;
+
+        font-size: 15px;
+    }
+
+    .subjects,
+    .about,
+    .get-started {
+        padding: 65px 15px;
+    }
+
+    .subjects h2,
+    .about h2,
+    .get-started h2 {
+        font-size: 27px;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .subject-card {
+        min-height: 130px;
+    }
+
+    .subject-card-title {
+        font-size: 20px;
+    }
+
+    .about-content {
+        gap: 28px;
+    }
+
+    .about-text {
+        font-size: 16px;
+    }
+
+    .footer-content {
+        padding: 22px 0;
+
+        flex-direction: column;
+
+        gap: 14px;
+
+        text-align: center;
+    }
+
+    .dynamic-message {
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .subject-card,
+    .button,
+    .navigation a {
+        transition: none;
+    }
+
+    .dynamic-message.show {
+        animation: none;
+    }
+}
