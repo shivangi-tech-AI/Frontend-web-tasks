@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Utkarsh Notes - Week 3</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container navbar">
+
+        <div class="logo">
+            UTKARSH <span>NOTES</span>
+        </div>
+
+        <nav class="navigation" aria-label="Main Navigation">
+            <span id="homeLink">Home</span>
+            <span id="subjectsLink">Subjects</span>
+            <span id="notesLink">Notes</span>
+            <span id="contactLink">Contact</span>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <h1>YOUR STUDY, YOUR WAY</h1>
+
+            <p>
+                Find organized notes and video resources for
+                your studies.
+            </p>
+
+            <button class="button" id="exploreButton">
+                Explore Notes
+            </button>
+
+            <!-- Dynamic message appears here -->
+            <div id="notesMessage" class="dynamic-message"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Subjects Section -->
+    <section class="subjects" id="subjects">
+
+        <div class="container">
+
+            <h2>SUBJECTS</h2>
+
+            <div class="subject-grid">
+
+                <div class="subject-card" data-subject="Computer Science">
+                    <h3>Computer<br>Science</h3>
+                </div>
+
+                <div class="subject-card" data-subject="Maths">
+                    <h3>Maths</h3>
+                </div>
+
+                <div class="subject-card" data-subject="Science">
+                    <h3>Science</h3>
+                </div>
+
+            </div>
+
+            <!-- Selected subject information -->
+            <div id="subjectMessage" class="subject-message">
+                Click a subject card to see more information.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about">
+
+        <div class="container">
+
+            <h2>ABOUT US</h2>
+
+            <div class="about-content">
+
+                <div class="about-image">
+                    <img src="study-image.png" alt="Students studying together in a learning">
+                </div>
+
+                <div class="about-text">
+
+                    <p>
+                        Utkarsh Notes helps students organize
+                        their learning and study materials.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Get Started Section -->
+    <section class="get-started" id="getStarted">
+
+        <div class="container">
+
+            <h2>GET STARTED</h2>
+
+            <button class="button" id="startButton">
+                Start Learning
+            </button>
+
+            <p id="startMessage" class="start-message"></p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="container footer-content">
+
+        <p>
+            © 2026 Utkarsh Notes
+        </p>
+
+        <div class="footer-links">
+            <span id="footerHome">Home</span>
+            <span id="footerContact">Contact</span>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
